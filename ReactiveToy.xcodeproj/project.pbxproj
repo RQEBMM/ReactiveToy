@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B3D96B7D1D69243D00158EDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D96B7C1D69243D00158EDC /* AppDelegate.swift */; };
+		B3D96B7F1D69243D00158EDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D96B7E1D69243D00158EDC /* ViewController.swift */; };
+		B3D96B821D69243D00158EDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D96B801D69243D00158EDC /* Main.storyboard */; };
+		B3D96B851D69243D00158EDC /* ReactiveToy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3D96B831D69243D00158EDC /* ReactiveToy.xcdatamodeld */; };
+		B3D96B871D69243D00158EDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D96B861D69243D00158EDC /* Assets.xcassets */; };
+		B3D96B8A1D69243D00158EDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D96B881D69243D00158EDC /* LaunchScreen.storyboard */; };
+		B3D96B951D69243D00158EDC /* ReactiveToyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D96B941D69243D00158EDC /* ReactiveToyTests.swift */; };
+		B3D96BA01D69243D00158EDC /* ReactiveToyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D96B9F1D69243D00158EDC /* ReactiveToyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B3D96B911D69243D00158EDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3D96B711D69243D00158EDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3D96B781D69243D00158EDC;
+			remoteInfo = ReactiveToy;
+		};
+		B3D96B9C1D69243D00158EDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3D96B711D69243D00158EDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3D96B781D69243D00158EDC;
+			remoteInfo = ReactiveToy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B3D96B791D69243D00158EDC /* ReactiveToy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveToy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3D96B7C1D69243D00158EDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B3D96B7E1D69243D00158EDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B3D96B811D69243D00158EDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3D96B841D69243D00158EDC /* ReactiveToy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReactiveToy.xcdatamodel; sourceTree = "<group>"; };
+		B3D96B861D69243D00158EDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3D96B891D69243D00158EDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B3D96B8B1D69243D00158EDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3D96B901D69243D00158EDC /* ReactiveToyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveToyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3D96B941D69243D00158EDC /* ReactiveToyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveToyTests.swift; sourceTree = "<group>"; };
+		B3D96B961D69243D00158EDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3D96B9B1D69243D00158EDC /* ReactiveToyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveToyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3D96B9F1D69243D00158EDC /* ReactiveToyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveToyUITests.swift; sourceTree = "<group>"; };
+		B3D96BA11D69243D00158EDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3D96B761D69243D00158EDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D96B8D1D69243D00158EDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D96B981D69243D00158EDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B3D96B701D69243D00158EDC = {
+			isa = PBXGroup;
+			children = (
+				B3D96B7B1D69243D00158EDC /* ReactiveToy */,
+				B3D96B931D69243D00158EDC /* ReactiveToyTests */,
+				B3D96B9E1D69243D00158EDC /* ReactiveToyUITests */,
+				B3D96B7A1D69243D00158EDC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B3D96B7A1D69243D00158EDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3D96B791D69243D00158EDC /* ReactiveToy.app */,
+				B3D96B901D69243D00158EDC /* ReactiveToyTests.xctest */,
+				B3D96B9B1D69243D00158EDC /* ReactiveToyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3D96B7B1D69243D00158EDC /* ReactiveToy */ = {
+			isa = PBXGroup;
+			children = (
+				B3D96B7C1D69243D00158EDC /* AppDelegate.swift */,
+				B3D96B7E1D69243D00158EDC /* ViewController.swift */,
+				B3D96B801D69243D00158EDC /* Main.storyboard */,
+				B3D96B861D69243D00158EDC /* Assets.xcassets */,
+				B3D96B881D69243D00158EDC /* LaunchScreen.storyboard */,
+				B3D96B8B1D69243D00158EDC /* Info.plist */,
+				B3D96B831D69243D00158EDC /* ReactiveToy.xcdatamodeld */,
+			);
+			path = ReactiveToy;
+			sourceTree = "<group>";
+		};
+		B3D96B931D69243D00158EDC /* ReactiveToyTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3D96B941D69243D00158EDC /* ReactiveToyTests.swift */,
+				B3D96B961D69243D00158EDC /* Info.plist */,
+			);
+			path = ReactiveToyTests;
+			sourceTree = "<group>";
+		};
+		B3D96B9E1D69243D00158EDC /* ReactiveToyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B3D96B9F1D69243D00158EDC /* ReactiveToyUITests.swift */,
+				B3D96BA11D69243D00158EDC /* Info.plist */,
+			);
+			path = ReactiveToyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3D96B781D69243D00158EDC /* ReactiveToy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3D96BA41D69243D00158EDC /* Build configuration list for PBXNativeTarget "ReactiveToy" */;
+			buildPhases = (
+				B3D96B751D69243D00158EDC /* Sources */,
+				B3D96B761D69243D00158EDC /* Frameworks */,
+				B3D96B771D69243D00158EDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReactiveToy;
+			productName = ReactiveToy;
+			productReference = B3D96B791D69243D00158EDC /* ReactiveToy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B3D96B8F1D69243D00158EDC /* ReactiveToyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3D96BA71D69243D00158EDC /* Build configuration list for PBXNativeTarget "ReactiveToyTests" */;
+			buildPhases = (
+				B3D96B8C1D69243D00158EDC /* Sources */,
+				B3D96B8D1D69243D00158EDC /* Frameworks */,
+				B3D96B8E1D69243D00158EDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3D96B921D69243D00158EDC /* PBXTargetDependency */,
+			);
+			name = ReactiveToyTests;
+			productName = ReactiveToyTests;
+			productReference = B3D96B901D69243D00158EDC /* ReactiveToyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B3D96B9A1D69243D00158EDC /* ReactiveToyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3D96BAA1D69243D00158EDC /* Build configuration list for PBXNativeTarget "ReactiveToyUITests" */;
+			buildPhases = (
+				B3D96B971D69243D00158EDC /* Sources */,
+				B3D96B981D69243D00158EDC /* Frameworks */,
+				B3D96B991D69243D00158EDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3D96B9D1D69243D00158EDC /* PBXTargetDependency */,
+			);
+			name = ReactiveToyUITests;
+			productName = ReactiveToyUITests;
+			productReference = B3D96B9B1D69243D00158EDC /* ReactiveToyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3D96B711D69243D00158EDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = AB;
+				TargetAttributes = {
+					B3D96B781D69243D00158EDC = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = Q9VGSL32Y7;
+						ProvisioningStyle = Automatic;
+					};
+					B3D96B8F1D69243D00158EDC = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = Q9VGSL32Y7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B3D96B781D69243D00158EDC;
+					};
+					B3D96B9A1D69243D00158EDC = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = Q9VGSL32Y7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B3D96B781D69243D00158EDC;
+					};
+				};
+			};
+			buildConfigurationList = B3D96B741D69243D00158EDC /* Build configuration list for PBXProject "ReactiveToy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B3D96B701D69243D00158EDC;
+			productRefGroup = B3D96B7A1D69243D00158EDC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3D96B781D69243D00158EDC /* ReactiveToy */,
+				B3D96B8F1D69243D00158EDC /* ReactiveToyTests */,
+				B3D96B9A1D69243D00158EDC /* ReactiveToyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B3D96B771D69243D00158EDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3D96B8A1D69243D00158EDC /* LaunchScreen.storyboard in Resources */,
+				B3D96B871D69243D00158EDC /* Assets.xcassets in Resources */,
+				B3D96B821D69243D00158EDC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D96B8E1D69243D00158EDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D96B991D69243D00158EDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3D96B751D69243D00158EDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3D96B7F1D69243D00158EDC /* ViewController.swift in Sources */,
+				B3D96B7D1D69243D00158EDC /* AppDelegate.swift in Sources */,
+				B3D96B851D69243D00158EDC /* ReactiveToy.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D96B8C1D69243D00158EDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3D96B951D69243D00158EDC /* ReactiveToyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D96B971D69243D00158EDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3D96BA01D69243D00158EDC /* ReactiveToyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B3D96B921D69243D00158EDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3D96B781D69243D00158EDC /* ReactiveToy */;
+			targetProxy = B3D96B911D69243D00158EDC /* PBXContainerItemProxy */;
+		};
+		B3D96B9D1D69243D00158EDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3D96B781D69243D00158EDC /* ReactiveToy */;
+			targetProxy = B3D96B9C1D69243D00158EDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B3D96B801D69243D00158EDC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3D96B811D69243D00158EDC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B3D96B881D69243D00158EDC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3D96B891D69243D00158EDC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B3D96BA21D69243D00158EDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B3D96BA31D69243D00158EDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B3D96BA51D69243D00158EDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q9VGSL32Y7;
+				INFOPLIST_FILE = ReactiveToy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AB.ReactiveToy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B3D96BA61D69243D00158EDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q9VGSL32Y7;
+				INFOPLIST_FILE = ReactiveToy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AB.ReactiveToy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B3D96BA81D69243D00158EDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Q9VGSL32Y7;
+				INFOPLIST_FILE = ReactiveToyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AB.ReactiveToyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactiveToy.app/ReactiveToy";
+			};
+			name = Debug;
+		};
+		B3D96BA91D69243D00158EDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Q9VGSL32Y7;
+				INFOPLIST_FILE = ReactiveToyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AB.ReactiveToyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactiveToy.app/ReactiveToy";
+			};
+			name = Release;
+		};
+		B3D96BAB1D69243D00158EDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = Q9VGSL32Y7;
+				INFOPLIST_FILE = ReactiveToyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AB.ReactiveToyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ReactiveToy;
+			};
+			name = Debug;
+		};
+		B3D96BAC1D69243D00158EDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = Q9VGSL32Y7;
+				INFOPLIST_FILE = ReactiveToyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AB.ReactiveToyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ReactiveToy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B3D96B741D69243D00158EDC /* Build configuration list for PBXProject "ReactiveToy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3D96BA21D69243D00158EDC /* Debug */,
+				B3D96BA31D69243D00158EDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3D96BA41D69243D00158EDC /* Build configuration list for PBXNativeTarget "ReactiveToy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3D96BA51D69243D00158EDC /* Debug */,
+				B3D96BA61D69243D00158EDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B3D96BA71D69243D00158EDC /* Build configuration list for PBXNativeTarget "ReactiveToyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3D96BA81D69243D00158EDC /* Debug */,
+				B3D96BA91D69243D00158EDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B3D96BAA1D69243D00158EDC /* Build configuration list for PBXNativeTarget "ReactiveToyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3D96BAB1D69243D00158EDC /* Debug */,
+				B3D96BAC1D69243D00158EDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B3D96B831D69243D00158EDC /* ReactiveToy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B3D96B841D69243D00158EDC /* ReactiveToy.xcdatamodel */,
+			);
+			currentVersion = B3D96B841D69243D00158EDC /* ReactiveToy.xcdatamodel */;
+			path = ReactiveToy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B3D96B711D69243D00158EDC /* Project object */;
+}
