@@ -98,8 +98,9 @@ extension APIImplementation : APIWrapper{
     func fetchDealershipWithId(id:String)->Observable<Dealership>{
         
         return Observable.create({ (subscriber) -> Disposable in
-            self.ref.child("Dealership").child(id).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-                print(snapshot)
+            self.ref.child("Dealerships").child(id).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                let postDict = snapshot.value as! [String : AnyObject]
+                print(postDict)
                 subscriber.onNext(Dealership.init(n: "Toms Ford", a: "123 Main St", lat: 30.264, lng: -97.762))
                 subscriber.onCompleted()
                 print("finished")
