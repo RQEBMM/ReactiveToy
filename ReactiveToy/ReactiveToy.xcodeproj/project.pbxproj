@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42A3EBC17B6857C37B624E28 /* Pods_ReactiveToy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE9EEF1F17B6204F259791F /* Pods_ReactiveToy.framework */; };
+		4B81632C28778ED303FCE5AE /* Pods_ReactiveToyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC0945DEE2F11F74F228D87 /* Pods_ReactiveToyUITests.framework */; };
 		B39DE1981D692CE000B18F48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DE1971D692CE000B18F48 /* AppDelegate.swift */; };
 		B39DE19A1D692CE000B18F48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DE1991D692CE000B18F48 /* ViewController.swift */; };
 		B39DE19D1D692CE000B18F48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B39DE19B1D692CE000B18F48 /* Main.storyboard */; };
@@ -39,7 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0922BEEC8F6B6E87F679E586 /* Pods-ReactiveToyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveToyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveToyUITests/Pods-ReactiveToyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1AC0945DEE2F11F74F228D87 /* Pods_ReactiveToyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveToyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB66DDB3F101C6A6D2ED3C5 /* Pods-ReactiveToy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveToy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveToy/Pods-ReactiveToy.debug.xcconfig"; sourceTree = "<group>"; };
+		240EBF7A01E4E629E08486EF /* Pods-ReactiveToyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveToyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveToyUITests/Pods-ReactiveToyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		556DDC22D28F76D4E32A553A /* Pods-ReactiveToyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveToyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveToyTests/Pods-ReactiveToyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5791AA88A1287CEF05E99C9A /* Pods-ReactiveToy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveToy.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveToy/Pods-ReactiveToy.release.xcconfig"; sourceTree = "<group>"; };
 		67BD69A640574C47C2F12E87 /* Pods_ReactiveToyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveToyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B81632C28778ED303FCE5AE /* Pods_ReactiveToyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +100,8 @@
 				5791AA88A1287CEF05E99C9A /* Pods-ReactiveToy.release.xcconfig */,
 				556DDC22D28F76D4E32A553A /* Pods-ReactiveToyTests.debug.xcconfig */,
 				802236865FEE22773224D06C /* Pods-ReactiveToyTests.release.xcconfig */,
+				0922BEEC8F6B6E87F679E586 /* Pods-ReactiveToyUITests.debug.xcconfig */,
+				240EBF7A01E4E629E08486EF /* Pods-ReactiveToyUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -158,6 +165,7 @@
 			children = (
 				9DE9EEF1F17B6204F259791F /* Pods_ReactiveToy.framework */,
 				67BD69A640574C47C2F12E87 /* Pods_ReactiveToyTests.framework */,
+				1AC0945DEE2F11F74F228D87 /* Pods_ReactiveToyUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,12 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B39DE1BC1D692CE100B18F48 /* Build configuration list for PBXNativeTarget "ReactiveToy" */;
 			buildPhases = (
-				5A6E585066F4E1D0BA7C0F9C /* Check Pods Manifest.lock */,
+				5A6E585066F4E1D0BA7C0F9C /* 📦 Check Pods Manifest.lock */,
 				B39DE1901D692CE000B18F48 /* Sources */,
 				B39DE1911D692CE000B18F48 /* Frameworks */,
 				B39DE1921D692CE000B18F48 /* Resources */,
-				F11BF968E98E5E8B14E357FE /* Embed Pods Frameworks */,
-				82DD45479C148718E8EED7B6 /* Copy Pods Resources */,
+				F11BF968E98E5E8B14E357FE /* 📦 Embed Pods Frameworks */,
+				82DD45479C148718E8EED7B6 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,12 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B39DE1BF1D692CE100B18F48 /* Build configuration list for PBXNativeTarget "ReactiveToyTests" */;
 			buildPhases = (
-				046A2B71017AA73DD1C42D84 /* Check Pods Manifest.lock */,
+				046A2B71017AA73DD1C42D84 /* 📦 Check Pods Manifest.lock */,
 				B39DE1A41D692CE100B18F48 /* Sources */,
 				B39DE1A51D692CE100B18F48 /* Frameworks */,
 				B39DE1A61D692CE100B18F48 /* Resources */,
-				75A27D2E48125F9DB4DC21AA /* Embed Pods Frameworks */,
-				C3FB400FCBC2A304A69DA24B /* Copy Pods Resources */,
+				75A27D2E48125F9DB4DC21AA /* 📦 Embed Pods Frameworks */,
+				C3FB400FCBC2A304A69DA24B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B39DE1C21D692CE100B18F48 /* Build configuration list for PBXNativeTarget "ReactiveToyUITests" */;
 			buildPhases = (
+				C9195D9B31E9349B295E1868 /* 📦 Check Pods Manifest.lock */,
 				B39DE1AF1D692CE100B18F48 /* Sources */,
 				B39DE1B01D692CE100B18F48 /* Frameworks */,
 				B39DE1B11D692CE100B18F48 /* Resources */,
+				78AB7A7E1CD5943956E7EE7F /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,14 +308,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		046A2B71017AA73DD1C42D84 /* Check Pods Manifest.lock */ = {
+		046A2B71017AA73DD1C42D84 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,14 +323,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5A6E585066F4E1D0BA7C0F9C /* Check Pods Manifest.lock */ = {
+		5A6E585066F4E1D0BA7C0F9C /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,14 +338,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		75A27D2E48125F9DB4DC21AA /* Embed Pods Frameworks */ = {
+		75A27D2E48125F9DB4DC21AA /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,14 +353,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveToyTests/Pods-ReactiveToyTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		82DD45479C148718E8EED7B6 /* Copy Pods Resources */ = {
+		78AB7A7E1CD5943956E7EE7F /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveToyUITests/Pods-ReactiveToyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82DD45479C148718E8EED7B6 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,14 +383,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveToy/Pods-ReactiveToy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C3FB400FCBC2A304A69DA24B /* Copy Pods Resources */ = {
+		C3FB400FCBC2A304A69DA24B /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,14 +398,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveToyTests/Pods-ReactiveToyTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F11BF968E98E5E8B14E357FE /* Embed Pods Frameworks */ = {
+		C9195D9B31E9349B295E1868 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F11BF968E98E5E8B14E357FE /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +628,7 @@
 		};
 		B39DE1C31D692CE100B18F48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0922BEEC8F6B6E87F679E586 /* Pods-ReactiveToyUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ReactiveToyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -599,6 +640,7 @@
 		};
 		B39DE1C41D692CE100B18F48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 240EBF7A01E4E629E08486EF /* Pods-ReactiveToyUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ReactiveToyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
