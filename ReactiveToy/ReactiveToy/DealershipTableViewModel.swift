@@ -16,5 +16,10 @@ class DealershipTableViewModel {
     init(name: String) {
         dealerName = name
     }
+    
+    init(name: String, carList:[CarViewModel]) {
+        dealerName = name
+        cars = carList
+    }
 
 }
