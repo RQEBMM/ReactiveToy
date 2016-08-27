@@ -42,11 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0922BEEC8F6B6E87F679E586 /* Pods-ReactiveToyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveToyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveToyUITests/Pods-ReactiveToyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1AC0945DEE2F11F74F228D87 /* Pods_ReactiveToyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveToyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB66DDB3F101C6A6D2ED3C5 /* Pods-ReactiveToy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveToy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveToy/Pods-ReactiveToy.debug.xcconfig"; sourceTree = "<group>"; };
-		240EBF7A01E4E629E08486EF /* Pods-ReactiveToyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveToyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveToyUITests/Pods-ReactiveToyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		556DDC22D28F76D4E32A553A /* Pods-ReactiveToyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveToyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveToyTests/Pods-ReactiveToyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5791AA88A1287CEF05E99C9A /* Pods-ReactiveToy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveToy.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveToy/Pods-ReactiveToy.release.xcconfig"; sourceTree = "<group>"; };
 		636A4A411D71290300CC8A11 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		636A4A431D71298900CC8A11 /* Dealership.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dealership.swift; sourceTree = "<group>"; };
@@ -55,7 +52,6 @@
 		636A4A4A1D712B2100CC8A11 /* APIImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIImplementation.swift; sourceTree = "<group>"; };
 		63E4DCB41D7127E20023E9AC /* APIWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIWrapper.swift; sourceTree = "<group>"; };
 		67BD69A640574C47C2F12E87 /* Pods_ReactiveToyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveToyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		802236865FEE22773224D06C /* Pods-ReactiveToyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveToyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveToyTests/Pods-ReactiveToyTests.release.xcconfig"; sourceTree = "<group>"; };
 		9DE9EEF1F17B6204F259791F /* Pods_ReactiveToy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveToy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39DE1941D692CE000B18F48 /* ReactiveToy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveToy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39DE1971D692CE000B18F48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,10 +96,6 @@
 			children = (
 				1EB66DDB3F101C6A6D2ED3C5 /* Pods-ReactiveToy.debug.xcconfig */,
 				5791AA88A1287CEF05E99C9A /* Pods-ReactiveToy.release.xcconfig */,
-				556DDC22D28F76D4E32A553A /* Pods-ReactiveToyTests.debug.xcconfig */,
-				802236865FEE22773224D06C /* Pods-ReactiveToyTests.release.xcconfig */,
-				0922BEEC8F6B6E87F679E586 /* Pods-ReactiveToyUITests.debug.xcconfig */,
-				240EBF7A01E4E629E08486EF /* Pods-ReactiveToyUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -607,6 +599,7 @@
 			baseConfigurationReference = 1EB66DDB3F101C6A6D2ED3C5 /* Pods-ReactiveToy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = ReactiveToy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -621,6 +614,7 @@
 			baseConfigurationReference = 5791AA88A1287CEF05E99C9A /* Pods-ReactiveToy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = ReactiveToy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -632,7 +626,6 @@
 		};
 		B39DE1C01D692CE100B18F48 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 556DDC22D28F76D4E32A553A /* Pods-ReactiveToyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ReactiveToyTests/Info.plist;
@@ -645,7 +638,6 @@
 		};
 		B39DE1C11D692CE100B18F48 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 802236865FEE22773224D06C /* Pods-ReactiveToyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ReactiveToyTests/Info.plist;

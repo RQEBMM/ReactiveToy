@@ -11,7 +11,33 @@ import RxSwift
 
 class DealerTableViewController: UITableViewController {
     
-    var dealerships:[DealershipTableViewModel]?
+    class DealershipTableViewModel {
+        
+        var name:String
+        var cars:[CarViewModel]?
+        
+        init(name: String) {
+            self.name = name
+        }
+        
+        init(name: String, cars:[CarViewModel]) {
+            self.name = name
+            self.cars = cars
+        }
+    }
+    
+    class CarViewModel {
+        
+        var name:String
+        var trim:String
+        
+        init(aName: String, aTrim:String) {
+            name = aName
+            trim = aTrim
+        }
+    }
+    
+    var tableViewModel = [DealershipTableViewModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,22 +47,50 @@ class DealerTableViewController: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        var dealerships = [DealershipTableViewModel]()
+        var dealerIds = [String]()
+        var carTainer = [String:String]()
+        var carModels = [CarViewModel]()
+        var cars = [Car]()
         
-        ServiceLocator.sharedInstance.getApiWrapper().beginMonitoringCars()
+        let carStream = ServiceLocator.sharedInstance.getApiWrapper().beginMonitoringCars()
             .flatMap { cars -> Observable<Car> in
                 cars.toObservable()
-            }.map { (car) -> String in
-                car.dealershipId!
-            }.distinctUntilChanged().flatMap { (dealerId) -> Observable<Dealership> in
+        }
+        carStream.map { (car) -> String in
+                cars.append(car)
+                return car.dealershipId!
+            }.filter { (dealerId) -> Bool in
+                if (dealerIds.contains(dealerId)) {
+                    return false
+                } else {
+                    dealerIds.append(dealerId)
+                    return true
+                }
+            }.flatMap { (dealerId) -> Observable<Dealership> in
                 ServiceLocator.sharedInstance.getApiWrapper().fetchDealershipWithId(dealerId)
             }.map { (dealership) -> DealershipTableViewModel in
                 DealershipTableViewModel(name: dealership.name!)
             }.map { (dealershipVm) in
-                self.dealerships?.append(dealershipVm)
-                print(self.dealerships)
+                dealerships.append(dealershipVm)
+                self.tableView.reloadData()
+            }.subscribeNext{
+                print(dealerships)
+                print(cars)
+                // now we have dealerships and cars
+                cars.toObservable().map { (car) -> Car in
+                    car.trim = 
         }
         
-                
+//        carStream.map { (car) -> (String,String) in
+//            (car.model!,car.trimId!)
+//            }.flatMap { (modelTrimTuple) -> Observable<(String,Trim)> in
+//                (modelTrimTuple.0, ServiceLocator.sharedInstance.getApiWrapper().fetchTrimWithTrimId(modelTrimTuple.1))
+//            }.map { (modelTrimObjTuple) -> CarViewModel in
+//                self.carModels.append(CarViewModel(aName:modelTrimObjTuple.0, aTrim:modelTrimObjTuple.1.name))
+//            }.subscribeNext{}
+//        
+        
         print(self.dealerships)
         
         title = "Cars by Dealership"
@@ -66,26 +120,22 @@ class DealerTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         
-        guard let sections = dealerships else {return 0}
-        
-        return sections.count
+        return tableViewModel.count
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        guard let myDealerships = dealerships else {return 0}
-        let section = myDealerships[section]
+        guard let cars = tableViewModel[section].contents.cars else {return 0}
         
-        return section.cars!.count
+        return cars.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("carCell", forIndexPath: indexPath)
         
-        guard let myDealerships = dealerships else {return cell}
-        let theCar = myDealerships[indexPath.section].cars![indexPath.row]
+        let theCar = tableViewModel[indexPath.section].cars![indexPath.row]
         
         cell.textLabel!.text = theCar.name
         cell.detailTextLabel!.text = theCar.trim
@@ -95,8 +145,7 @@ class DealerTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        guard let myDealerships = dealerships else {return ""}
-        let theDealer = myDealerships[section]
+        let theDealer = dealerships[section]
         
         return theDealer.dealerName
     }

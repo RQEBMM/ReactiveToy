@@ -8,18 +8,3 @@
 
 import Foundation
 
-class DealershipTableViewModel {
-    
-    var dealerName:String
-    var cars:[CarViewModel]?
-    
-    init(name: String) {
-        dealerName = name
-    }
-    
-    init(name: String, carList:[CarViewModel]) {
-        dealerName = name
-        cars = carList
-    }
-
-}

@@ -28,26 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B39DE1A71D692CE100B18F48"
-               BuildableName = "ReactiveToyTests.xctest"
-               BlueprintName = "ReactiveToyTests"
-               ReferencedContainer = "container:ReactiveToy.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B39DE1B21D692CE100B18F48"
-               BuildableName = "ReactiveToyUITests.xctest"
-               BlueprintName = "ReactiveToyUITests"
-               ReferencedContainer = "container:ReactiveToy.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
