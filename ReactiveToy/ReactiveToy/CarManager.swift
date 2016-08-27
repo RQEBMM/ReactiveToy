@@ -11,6 +11,8 @@ import Foundation
 class CarManager {
     
     var cars:[Car] = []
+    var dealdership = Dealership()
+    var trim = Trim()
     
     init() {
         
