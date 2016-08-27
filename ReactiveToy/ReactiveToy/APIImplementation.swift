@@ -15,29 +15,23 @@ class APIImplementation{
     lazy var ref = FIRDatabase.database().reference()
     
     func guaranteeData() {
-        let key = ref.child("users").childByAutoId().key
-        let post = ["name": "Ben"]
         
-        let childUpdates = ["/users/\(key)": post]
-        ref.updateChildValues(childUpdates)
-        
-        let _ = ref.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
-            let postDict = snapshot.value as! [String : AnyObject]
-            // ...
-            print(postDict)
-        })
-
+        generateDealerships()
     }
     
     func generateDealerships(){
-        let ds = [Dealership]()
-        for i in 0...10{
+        var ds = [Dealership]()
+        ds.append(Dealership.init(n: "Toms Ford", a: "123 Main St", lat: 30.264, lng: -97.762))
+        ds.append(Dealership.init(n: "Alans Toyota", a: "123 Long St", lat: 30.262, lng: -97.765))
+        ds.append(Dealership.init(n: "Johhns Chevy", a: "123 Maple St", lat: 30.282, lng: -97.769))
+        var childUpdates:[String: AnyObject] = [String: AnyObject]()
+        for dealership in ds{
             let key = ref.child("Dealerships").childByAutoId().key
-            /*post = [
-                    "name":names[i%3],
-                    ]*/
+            let post = [
+                    "name":dealership.name, "address": dealership.address, "latitude":dealership.latitude, "longitude":dealership.longitude]
+            childUpdates["/Dealerships/\(key)"] = post
         }
-        let post = ["name": "Ben"]
+        ref.updateChildValues(childUpdates)
     }
     
 }
