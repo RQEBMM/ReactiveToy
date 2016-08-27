@@ -13,4 +13,8 @@ class CarViewModel {
     var name:String = ""
     var trim:String = ""
     
+    init(aName: String, aTrim:String) {
+        name = aName
+        trim = aTrim
+    }
 }

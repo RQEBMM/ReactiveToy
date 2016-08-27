@@ -27,6 +27,7 @@
 		B3C3AA151D713DAC00A1FDC0 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3AA131D713DAC00A1FDC0 /* CarViewModel.swift */; };
 		B3C3AA171D713DC400A1FDC0 /* DealershipTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3AA161D713DC400A1FDC0 /* DealershipTableViewModel.swift */; };
 		B3C3AA181D713DC400A1FDC0 /* DealershipTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3AA161D713DC400A1FDC0 /* DealershipTableViewModel.swift */; };
+		B3C3AA1D1D7144F400A1FDC0 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3AA1C1D7144F400A1FDC0 /* CarTableViewCell.swift */; };
 		EDE5E752E637F3613C697CE9 /* Pods_ReactiveToyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BD69A640574C47C2F12E87 /* Pods_ReactiveToyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		B3C3AA0B1D713AAD00A1FDC0 /* DealerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerTableViewController.swift; sourceTree = "<group>"; };
 		B3C3AA131D713DAC00A1FDC0 /* CarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
 		B3C3AA161D713DC400A1FDC0 /* DealershipTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealershipTableViewModel.swift; sourceTree = "<group>"; };
+		B3C3AA1C1D7144F400A1FDC0 /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,11 +128,11 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
-		B34D09121D7135E4004F0611 /* Manager */ = {
+		B34D09121D7135E4004F0611 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Manager;
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		B39DE18B1D692CE000B18F48 = {
@@ -157,9 +159,10 @@
 		B39DE1961D692CE000B18F48 /* ReactiveToy */ = {
 			isa = PBXGroup;
 			children = (
+				B3C3AA191D71443800A1FDC0 /* Views */,
 				B3C3AA0F1D713D6D00A1FDC0 /* View Models */,
 				B3C3AA0E1D713BA600A1FDC0 /* Controllers */,
-				B34D09121D7135E4004F0611 /* Manager */,
+				B34D09121D7135E4004F0611 /* Managers */,
 				636A4A471D712A6800CC8A11 /* Services */,
 				636A4A401D7128F800CC8A11 /* Models */,
 				B39DE1C51D69300500B18F48 /* GoogleService-Info.plist */,
@@ -205,6 +208,14 @@
 				B3C3AA161D713DC400A1FDC0 /* DealershipTableViewModel.swift */,
 			);
 			name = "View Models";
+			sourceTree = "<group>";
+		};
+		B3C3AA191D71443800A1FDC0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3C3AA1C1D7144F400A1FDC0 /* CarTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		D30208C3BBA3CB8B36462356 /* Frameworks */ = {
@@ -460,6 +471,7 @@
 				B3C3AA141D713DAC00A1FDC0 /* CarViewModel.swift in Sources */,
 				636A4A491D712A7D00CC8A11 /* ServiceLocator.swift in Sources */,
 				B3C3AA171D713DC400A1FDC0 /* DealershipTableViewModel.swift in Sources */,
+				B3C3AA1D1D7144F400A1FDC0 /* CarTableViewCell.swift in Sources */,
 				B3C3AA0C1D713AAD00A1FDC0 /* DealerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

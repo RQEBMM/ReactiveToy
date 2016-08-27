@@ -21,7 +21,20 @@ class DealerTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        title = "Cars by Dealership"
         
+        dealerships = [
+            DealershipTableViewModel(name: "A Dealer", carList:[
+                CarViewModel(aName:"Car 1", aTrim:"Trim 1"),
+                CarViewModel(aName:"Car 2", aTrim:"Trim 2"),
+                CarViewModel(aName:"Car 3", aTrim:"Trim 3")
+                ]),
+            DealershipTableViewModel(name: "Another Dealer", carList:[
+                CarViewModel(aName:"Car A", aTrim:"Trim A"),
+                CarViewModel(aName:"Car B", aTrim:"Trim B"),
+                CarViewModel(aName:"Car C", aTrim:"Trim C")
+                ])
+        ]
         
     }
 
@@ -49,15 +62,27 @@ class DealerTableViewController: UITableViewController {
         return section.cars.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("carCell", forIndexPath: indexPath)
+        
+        guard let myDealerships = dealerships else {return cell}
+        let theCar = myDealerships[indexPath.section].cars[indexPath.row]
+        
+        cell.textLabel!.text = theCar.name
+        cell.detailTextLabel!.text = theCar.trim
 
         return cell
     }
-    */
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        guard let myDealerships = dealerships else {return ""}
+        let theDealer = myDealerships[section]
+        
+        return theDealer.dealerName
+    }
 
     /*
     // Override to support conditional editing of the table view.

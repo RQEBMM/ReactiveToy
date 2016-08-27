@@ -17,12 +17,11 @@ class Car {
     var trim:Trim?
     var dealership:Dealership?
     
-    init(v:String, m:String, tid:String, did:String) {
-
-        vin = v
-        model = m
-        trimId = tid
-        dealershipId = did
+    init(aVin:String, aModel:String, aTrimId:String, aDealershipId:String) {
+        vin = aVin
+        model = aModel
+        trimId = aTrimId
+        dealershipId = aDealershipId
     }
     
 }

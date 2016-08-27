@@ -37,7 +37,7 @@ class APIImplementation{
 }
 extension APIImplementation : APIWrapper{
     func beginMonitoringCars() -> Observable<[Car]>{
-        return Observable.just([Car.init(v: "231342423423423", m: "Corolla", tid: "123", did: "555")])
+        return Observable.just([Car.init(aVin: "231342423423423", aModel: "Corolla", aTrimId: "123", aDealershipId: "555")])
     }
     func fetchDealershipWithId(id:String)->Observable<Dealership>{
         return Observable.just(Dealership.init(n: "Tom's Ford Dealership", a: "123 Main St", lat: 30.2324, lng: -97.321))
