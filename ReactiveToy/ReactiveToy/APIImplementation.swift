@@ -66,24 +66,24 @@ class APIImplementation{
         var cars = [Car]()
         
         let models = ["Corolla", "A4", "Accord", "Focus"]
+
+        var childUpdates:[String: AnyObject] = [String: AnyObject]()
         for _ in 0...30{
             if let trims = dummyTrims,
-                let dealerships = dummyDealerships
-            {
+                let dealerships = dummyDealerships{
+                let key = ref.child("Cars").childByAutoId().key
                 let trim_id = trims[Int(arc4random_uniform(3))]
                 let dealership_id = dealerships[Int(arc4random_uniform(3))]
                 let model = models[Int(arc4random_uniform(4))]
-                cars.append(Car.init(v: "12312312312", m:model, tid: trim_id, did: dealership_id))
+                let car = Car.init(v: "12312312312", m:model, tid: trim_id, did: dealership_id, server_id: key)
+                cars.append(car)
+                
+                let post = [
+                    "vin":car.vin!, "model": car.model!, "trim_id":car.trimId!, "dealership_id":car.dealershipId!]
+                
+                childUpdates["/Cars/\(key)"] = post
                 
             }
-
-        }
-        var childUpdates:[String: AnyObject] = [String: AnyObject]()
-        for car in cars{
-            let key = ref.child("Cars").childByAutoId().key
-            let post = [
-                "vin":car.vin!, "model": car.model!, "trim_id":car.trimId!, "dealership_id":car.dealershipId!]
-            childUpdates["/Cars/\(key)"] = post
             
         }
         ref.updateChildValues(childUpdates)
@@ -99,7 +99,7 @@ extension APIImplementation : APIWrapper{
                 for(_, snapshot) in snapshots.children.enumerate(){
                     if let firsnap = snapshot as? FIRDataSnapshot,
                     let postDict = firsnap.value as? [String:AnyObject],
-                    let car = Car.init(json: postDict){
+                    let car = Car.init(json: postDict, server_id: firsnap.key){
                         cars.append(car)
                     }
 
