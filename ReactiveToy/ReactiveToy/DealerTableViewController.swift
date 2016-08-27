@@ -42,7 +42,11 @@ class DealerTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        guard let myDealerships = dealerships else {return 0}
+        let section = myDealerships[section]
+        
+        return section.cars.count
     }
 
     /*
