@@ -13,10 +13,3 @@ target 'ReactiveToy' do
     pod 'RxBlocking', '~> 2.0'
     
 end
-
-target 'ReactiveToyTests' do
-    
-    pod 'RxTests',    '~> 2.0'
-
-end
-
