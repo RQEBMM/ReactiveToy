@@ -14,12 +14,33 @@ import Firebase
 class APIImplementation{
     lazy var ref = FIRDatabase.database().reference()
     
+    var dummyDealerships:[Dealership]?
+    var dummyTrims:[Trim]?
+    
     func guaranteeData() {
         
-        generateDealerships()
+        dummyDealerships = generateDealerships()
+        dummyTrims = generateTrims()
+        
+    }
+    func generateTrims()->[Trim]{
+        var trims = [Trim]()
+        trims.append(Trim.init(m: 1250, e: "4Liter Turbo", mpg: 25.57, n: "Premium"))
+        trims.append(Trim.init(m: 1000, e: "2Liter Turbo", mpg: 25.57, n: "Basic"))
+        trims.append(Trim.init(m: 1000, e: "2Liter Turbo", mpg: 25.57, n: "Standard"))
+        var childUpdates:[String: AnyObject] = [String: AnyObject]()
+        for trim in trims{
+            let key = ref.child("Trims").childByAutoId().key
+            let post = [
+                "msrp":trim.msrp, "engine": trim.engine, "mpg":trim.gasMileage, "name":trim.name]
+            childUpdates["/Trims/\(key)"] = post
+        }
+        ref.updateChildValues(childUpdates)
+        return trims
+
     }
     
-    func generateDealerships(){
+    func generateDealerships()->[Dealership]{
         var ds = [Dealership]()
         ds.append(Dealership.init(n: "Toms Ford", a: "123 Main St", lat: 30.264, lng: -97.762))
         ds.append(Dealership.init(n: "Alans Toyota", a: "123 Long St", lat: 30.262, lng: -97.765))
@@ -32,6 +53,7 @@ class APIImplementation{
             childUpdates["/Dealerships/\(key)"] = post
         }
         ref.updateChildValues(childUpdates)
+        return ds
     }
     
 }
