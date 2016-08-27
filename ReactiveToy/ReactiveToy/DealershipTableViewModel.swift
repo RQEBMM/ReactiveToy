@@ -11,11 +11,10 @@ import Foundation
 class DealershipTableViewModel {
     
     var dealerName:String
-    var cars:[CarViewModel]
+    var cars:[CarViewModel]?
     
-    init(name: String, carList: [CarViewModel]) {
+    init(name: String) {
         dealerName = name
-        cars = carList
     }
 
 }
