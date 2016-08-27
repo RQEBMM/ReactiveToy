@@ -9,17 +9,15 @@
 import Foundation
 class Car{
     var vin:String
-    var exteriorColor:String
-    var interiorColor:String
+    var model:String
     var trimId:String
     var dealershipId:String
     var trim:Trim?
     var dealership:Dealership?
     
-    init(v:String, e:String, i:String, tid:String, did:String){
+    init(v:String, m:String, tid:String, did:String){
         vin = v
-        exteriorColor = e
-        interiorColor = i
+        model = m
         trimId = tid
         dealershipId = did
     }
