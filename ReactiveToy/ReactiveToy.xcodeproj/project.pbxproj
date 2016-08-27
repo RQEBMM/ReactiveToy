@@ -12,6 +12,8 @@
 		636A4A421D71290300CC8A11 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4A411D71290300CC8A11 /* Car.swift */; };
 		636A4A441D71298900CC8A11 /* Dealership.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4A431D71298900CC8A11 /* Dealership.swift */; };
 		636A4A461D71299300CC8A11 /* Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4A451D71299300CC8A11 /* Trim.swift */; };
+		636A4A491D712A7D00CC8A11 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4A481D712A7D00CC8A11 /* ServiceLocator.swift */; };
+		636A4A4B1D712B2100CC8A11 /* APIImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4A4A1D712B2100CC8A11 /* APIImplementation.swift */; };
 		63E4DCB51D7127E20023E9AC /* APIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E4DCB41D7127E20023E9AC /* APIWrapper.swift */; };
 		B39DE1981D692CE000B18F48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DE1971D692CE000B18F48 /* AppDelegate.swift */; };
 		B39DE19A1D692CE000B18F48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DE1991D692CE000B18F48 /* ViewController.swift */; };
@@ -53,6 +55,8 @@
 		636A4A411D71290300CC8A11 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		636A4A431D71298900CC8A11 /* Dealership.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dealership.swift; sourceTree = "<group>"; };
 		636A4A451D71299300CC8A11 /* Trim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trim.swift; sourceTree = "<group>"; };
+		636A4A481D712A7D00CC8A11 /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		636A4A4A1D712B2100CC8A11 /* APIImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIImplementation.swift; sourceTree = "<group>"; };
 		63E4DCB41D7127E20023E9AC /* APIWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIWrapper.swift; sourceTree = "<group>"; };
 		67BD69A640574C47C2F12E87 /* Pods_ReactiveToyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveToyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		802236865FEE22773224D06C /* Pods-ReactiveToyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveToyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveToyTests/Pods-ReactiveToyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +128,16 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		636A4A471D712A6800CC8A11 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				636A4A481D712A7D00CC8A11 /* ServiceLocator.swift */,
+				63E4DCB41D7127E20023E9AC /* APIWrapper.swift */,
+				636A4A4A1D712B2100CC8A11 /* APIImplementation.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		B39DE18B1D692CE000B18F48 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +163,7 @@
 		B39DE1961D692CE000B18F48 /* ReactiveToy */ = {
 			isa = PBXGroup;
 			children = (
+				636A4A471D712A6800CC8A11 /* Services */,
 				636A4A401D7128F800CC8A11 /* Models */,
 				B39DE1C51D69300500B18F48 /* GoogleService-Info.plist */,
 				B39DE1971D692CE000B18F48 /* AppDelegate.swift */,
@@ -157,7 +172,6 @@
 				B39DE19E1D692CE000B18F48 /* Assets.xcassets */,
 				B39DE1A01D692CE000B18F48 /* LaunchScreen.storyboard */,
 				B39DE1A31D692CE000B18F48 /* Info.plist */,
-				63E4DCB41D7127E20023E9AC /* APIWrapper.swift */,
 			);
 			path = ReactiveToy;
 			sourceTree = "<group>";
@@ -457,10 +471,12 @@
 			files = (
 				B39DE19A1D692CE000B18F48 /* ViewController.swift in Sources */,
 				63E4DCB51D7127E20023E9AC /* APIWrapper.swift in Sources */,
+				636A4A4B1D712B2100CC8A11 /* APIImplementation.swift in Sources */,
 				636A4A421D71290300CC8A11 /* Car.swift in Sources */,
 				636A4A461D71299300CC8A11 /* Trim.swift in Sources */,
 				636A4A441D71298900CC8A11 /* Dealership.swift in Sources */,
 				B39DE1981D692CE000B18F48 /* AppDelegate.swift in Sources */,
+				636A4A491D712A7D00CC8A11 /* ServiceLocator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
