@@ -23,6 +23,10 @@ class DealerTableViewController: UITableViewController {
         
         title = "Cars by Dealership"
         
+        ServiceLocator.sharedInstance.getApiWrapper().beginMonitoringCars().flatMap
+        
+        
+        
         dealerships = [
             DealershipTableViewModel(name: "A Dealer", carList:[
                 CarViewModel(aName:"Car 1", aTrim:"Trim 1"),
