@@ -8,35 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		42A3EBC17B6857C37B624E28 /* Pods_ReactiveToy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE9EEF1F17B6204F259791F /* Pods_ReactiveToy.framework */; };
-		4B81632C28778ED303FCE5AE /* Pods_ReactiveToyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC0945DEE2F11F74F228D87 /* Pods_ReactiveToyUITests.framework */; };
 		636A4A421D71290300CC8A11 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4A411D71290300CC8A11 /* Car.swift */; };
 		636A4A441D71298900CC8A11 /* Dealership.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4A431D71298900CC8A11 /* Dealership.swift */; };
 		636A4A461D71299300CC8A11 /* Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4A451D71299300CC8A11 /* Trim.swift */; };
 		636A4A491D712A7D00CC8A11 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4A481D712A7D00CC8A11 /* ServiceLocator.swift */; };
 		636A4A4B1D712B2100CC8A11 /* APIImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4A4A1D712B2100CC8A11 /* APIImplementation.swift */; };
 		63E4DCB51D7127E20023E9AC /* APIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E4DCB41D7127E20023E9AC /* APIWrapper.swift */; };
+		B34D09141D713616004F0611 /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D09131D713616004F0611 /* CarManager.swift */; };
+		B34D09151D713616004F0611 /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D09131D713616004F0611 /* CarManager.swift */; };
 		B39DE1981D692CE000B18F48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DE1971D692CE000B18F48 /* AppDelegate.swift */; };
 		B39DE19A1D692CE000B18F48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DE1991D692CE000B18F48 /* ViewController.swift */; };
 		B39DE19D1D692CE000B18F48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B39DE19B1D692CE000B18F48 /* Main.storyboard */; };
 		B39DE19F1D692CE000B18F48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B39DE19E1D692CE000B18F48 /* Assets.xcassets */; };
 		B39DE1A21D692CE000B18F48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B39DE1A01D692CE000B18F48 /* LaunchScreen.storyboard */; };
 		B39DE1AD1D692CE100B18F48 /* ReactiveToyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DE1AC1D692CE100B18F48 /* ReactiveToyTests.swift */; };
-		B39DE1B81D692CE100B18F48 /* ReactiveToyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DE1B71D692CE100B18F48 /* ReactiveToyUITests.swift */; };
 		B39DE1C61D69300500B18F48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39DE1C51D69300500B18F48 /* GoogleService-Info.plist */; };
 		B39DE1C71D69300500B18F48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39DE1C51D69300500B18F48 /* GoogleService-Info.plist */; };
-		B39DE1C81D69300500B18F48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39DE1C51D69300500B18F48 /* GoogleService-Info.plist */; };
 		EDE5E752E637F3613C697CE9 /* Pods_ReactiveToyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BD69A640574C47C2F12E87 /* Pods_ReactiveToyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		B39DE1A91D692CE100B18F48 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B39DE18C1D692CE000B18F48 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B39DE1931D692CE000B18F48;
-			remoteInfo = ReactiveToy;
-		};
-		B39DE1B41D692CE100B18F48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B39DE18C1D692CE000B18F48 /* Project object */;
 			proxyType = 1;
@@ -61,6 +53,7 @@
 		67BD69A640574C47C2F12E87 /* Pods_ReactiveToyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveToyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		802236865FEE22773224D06C /* Pods-ReactiveToyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveToyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveToyTests/Pods-ReactiveToyTests.release.xcconfig"; sourceTree = "<group>"; };
 		9DE9EEF1F17B6204F259791F /* Pods_ReactiveToy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveToy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B34D09131D713616004F0611 /* CarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarManager.swift; sourceTree = "<group>"; };
 		B39DE1941D692CE000B18F48 /* ReactiveToy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveToy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39DE1971D692CE000B18F48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B39DE1991D692CE000B18F48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +64,6 @@
 		B39DE1A81D692CE100B18F48 /* ReactiveToyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveToyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39DE1AC1D692CE100B18F48 /* ReactiveToyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveToyTests.swift; sourceTree = "<group>"; };
 		B39DE1AE1D692CE100B18F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B39DE1B31D692CE100B18F48 /* ReactiveToyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveToyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39DE1B71D692CE100B18F48 /* ReactiveToyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveToyUITests.swift; sourceTree = "<group>"; };
 		B39DE1B91D692CE100B18F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B39DE1C51D69300500B18F48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -91,14 +83,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDE5E752E637F3613C697CE9 /* Pods_ReactiveToyTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B39DE1B01D692CE100B18F48 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4B81632C28778ED303FCE5AE /* Pods_ReactiveToyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +122,14 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		B34D09121D7135E4004F0611 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B34D09131D713616004F0611 /* CarManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		B39DE18B1D692CE000B18F48 = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +147,6 @@
 			children = (
 				B39DE1941D692CE000B18F48 /* ReactiveToy.app */,
 				B39DE1A81D692CE100B18F48 /* ReactiveToyTests.xctest */,
-				B39DE1B31D692CE100B18F48 /* ReactiveToyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,6 +154,7 @@
 		B39DE1961D692CE000B18F48 /* ReactiveToy */ = {
 			isa = PBXGroup;
 			children = (
+				B34D09121D7135E4004F0611 /* Manager */,
 				636A4A471D712A6800CC8A11 /* Services */,
 				636A4A401D7128F800CC8A11 /* Models */,
 				B39DE1C51D69300500B18F48 /* GoogleService-Info.plist */,
@@ -217,6 +209,7 @@
 				B39DE1921D692CE000B18F48 /* Resources */,
 				F11BF968E98E5E8B14E357FE /* 📦 Embed Pods Frameworks */,
 				82DD45479C148718E8EED7B6 /* 📦 Copy Pods Resources */,
+				162DA92D42372F2239E84758 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +230,7 @@
 				B39DE1A61D692CE100B18F48 /* Resources */,
 				75A27D2E48125F9DB4DC21AA /* 📦 Embed Pods Frameworks */,
 				C3FB400FCBC2A304A69DA24B /* 📦 Copy Pods Resources */,
+				8ADE8DDAFD1A6E371F4405D2 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,26 +241,6 @@
 			productName = ReactiveToyTests;
 			productReference = B39DE1A81D692CE100B18F48 /* ReactiveToyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B39DE1B21D692CE100B18F48 /* ReactiveToyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B39DE1C21D692CE100B18F48 /* Build configuration list for PBXNativeTarget "ReactiveToyUITests" */;
-			buildPhases = (
-				C9195D9B31E9349B295E1868 /* 📦 Check Pods Manifest.lock */,
-				B39DE1AF1D692CE100B18F48 /* Sources */,
-				B39DE1B01D692CE100B18F48 /* Frameworks */,
-				B39DE1B11D692CE100B18F48 /* Resources */,
-				78AB7A7E1CD5943956E7EE7F /* 📦 Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B39DE1B51D692CE100B18F48 /* PBXTargetDependency */,
-			);
-			name = ReactiveToyUITests;
-			productName = ReactiveToyUITests;
-			productReference = B39DE1B31D692CE100B18F48 /* ReactiveToyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -282,10 +256,6 @@
 						CreatedOnToolsVersion = 7.3.1;
 					};
 					B39DE1A71D692CE100B18F48 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = B39DE1931D692CE000B18F48;
-					};
-					B39DE1B21D692CE100B18F48 = {
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = B39DE1931D692CE000B18F48;
 					};
@@ -306,7 +276,6 @@
 			targets = (
 				B39DE1931D692CE000B18F48 /* ReactiveToy */,
 				B39DE1A71D692CE100B18F48 /* ReactiveToyTests */,
-				B39DE1B21D692CE100B18F48 /* ReactiveToyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -331,14 +300,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B39DE1B11D692CE100B18F48 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B39DE1C81D69300500B18F48 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -355,6 +316,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		162DA92D42372F2239E84758 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveToy/Pods-ReactiveToy-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5A6E585066F4E1D0BA7C0F9C /* 📦 Check Pods Manifest.lock */ = {
@@ -387,21 +363,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveToyTests/Pods-ReactiveToyTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		78AB7A7E1CD5943956E7EE7F /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveToyUITests/Pods-ReactiveToyUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		82DD45479C148718E8EED7B6 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -417,6 +378,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveToy/Pods-ReactiveToy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8ADE8DDAFD1A6E371F4405D2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveToyTests/Pods-ReactiveToyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C3FB400FCBC2A304A69DA24B /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -430,21 +406,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveToyTests/Pods-ReactiveToyTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C9195D9B31E9349B295E1868 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F11BF968E98E5E8B14E357FE /* 📦 Embed Pods Frameworks */ = {
@@ -473,6 +434,7 @@
 				63E4DCB51D7127E20023E9AC /* APIWrapper.swift in Sources */,
 				636A4A4B1D712B2100CC8A11 /* APIImplementation.swift in Sources */,
 				636A4A421D71290300CC8A11 /* Car.swift in Sources */,
+				B34D09141D713616004F0611 /* CarManager.swift in Sources */,
 				636A4A461D71299300CC8A11 /* Trim.swift in Sources */,
 				636A4A441D71298900CC8A11 /* Dealership.swift in Sources */,
 				B39DE1981D692CE000B18F48 /* AppDelegate.swift in Sources */,
@@ -484,15 +446,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B34D09151D713616004F0611 /* CarManager.swift in Sources */,
 				B39DE1AD1D692CE100B18F48 /* ReactiveToyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B39DE1AF1D692CE100B18F48 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B39DE1B81D692CE100B18F48 /* ReactiveToyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,11 +458,6 @@
 			isa = PBXTargetDependency;
 			target = B39DE1931D692CE000B18F48 /* ReactiveToy */;
 			targetProxy = B39DE1A91D692CE100B18F48 /* PBXContainerItemProxy */;
-		};
-		B39DE1B51D692CE100B18F48 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B39DE1931D692CE000B18F48 /* ReactiveToy */;
-			targetProxy = B39DE1B41D692CE100B18F48 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -670,30 +620,6 @@
 			};
 			name = Release;
 		};
-		B39DE1C31D692CE100B18F48 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0922BEEC8F6B6E87F679E586 /* Pods-ReactiveToyUITests.debug.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = ReactiveToyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AB.ReactiveToyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ReactiveToy;
-			};
-			name = Debug;
-		};
-		B39DE1C41D692CE100B18F48 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 240EBF7A01E4E629E08486EF /* Pods-ReactiveToyUITests.release.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = ReactiveToyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AB.ReactiveToyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ReactiveToy;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -720,15 +646,6 @@
 			buildConfigurations = (
 				B39DE1C01D692CE100B18F48 /* Debug */,
 				B39DE1C11D692CE100B18F48 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B39DE1C21D692CE100B18F48 /* Build configuration list for PBXNativeTarget "ReactiveToyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B39DE1C31D692CE100B18F48 /* Debug */,
-				B39DE1C41D692CE100B18F48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
