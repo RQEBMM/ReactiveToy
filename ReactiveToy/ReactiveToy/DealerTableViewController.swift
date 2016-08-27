@@ -21,26 +21,26 @@ class DealerTableViewController: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-//        
-//        ServiceLocator.sharedInstance.getApiWrapper().beginMonitoringCars()
-//            .flatMap { cars -> Observable<Car> in
-//                cars.toObservable()
-//            }.map { (car) -> String in
-//                return car.dealershipId
-//            }.distinctUntilChanged().flatMap { (dealerId) -> Observable<Dealership> in
-//                ServiceLocator.sharedInstance.getApiWrapper().fetchDealershipWithId(dealerId)
-//            }.map { (dealership) -> DealershipTableViewModel in
-//                DealershipTableViewModel(name: dealership.name!)
-//            }.toArray().subscribeNext { dealershipVmStream in
-//                self.dealerships = dealershipVmStream
-//        }
-//        
-        ServiceLocator.sharedInstance.getApiWrapper().beginMonitoringCars()
+        
+        let carStream = ServiceLocator.sharedInstance.getApiWrapper().beginMonitoringCars()
             .flatMap { cars -> Observable<Car> in
                 cars.toObservable()
-            }.map { (car) -> String in
-                return car.dealershipId
-            }
+        }
+        
+        carStream.map { (car) -> String in
+                car.dealershipId
+            }.distinctUntilChanged().flatMap { (dealerId) -> Observable<Dealership> in
+                ServiceLocator.sharedInstance.getApiWrapper().fetchDealershipWithId(dealerId)
+            }.map { (dealership) -> DealershipTableViewModel in
+                DealershipTableViewModel(name: dealership.name!)
+            }.toArray().subscribeNext { dealershipVmStream in
+                self.dealerships = dealershipVmStream
+                
+        }
+        
+        var array = []
+        
+        [].enumerate()
         
         title = "Cars by Dealership"
         
@@ -56,6 +56,7 @@ class DealerTableViewController: UITableViewController {
 //                CarViewModel(aName:"Car C", aTrim:"Trim C")
 //                ])
 //        ]
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -91,7 +92,7 @@ class DealerTableViewController: UITableViewController {
         
         cell.textLabel!.text = theCar.name
         cell.detailTextLabel!.text = theCar.trim
-
+        
         return cell
     }
     
@@ -102,7 +103,7 @@ class DealerTableViewController: UITableViewController {
         
         return theDealer.dealerName
     }
-
+    
     /*
      // Override to support conditional editing of the table view.
      override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
