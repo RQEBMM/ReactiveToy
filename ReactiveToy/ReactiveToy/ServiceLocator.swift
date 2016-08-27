@@ -12,7 +12,7 @@ class ServiceLocator {
     
     static let sharedInstance = ServiceLocator()
     
-    lazy var apiWrapper = APIImplementation.init()
+    private lazy var apiWrapper = APIImplementation.init()
     
     func getApiWrapper()->APIWrapper {
         return apiWrapper
