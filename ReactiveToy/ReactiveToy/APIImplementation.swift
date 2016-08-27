@@ -15,8 +15,8 @@ class APIImplementation{
     }
 }
 extension APIImplementation : APIWrapper{
-    func beginMonitoringCars() -> Observable<Car>{
-        return Observable.just(Car.init())
+    func beginMonitoringCars() -> Observable<[Car]>{
+        return Observable.just([Car.init()])
     }
     func fetchDealershipWithId(id:String)->Observable<Dealership>{
         return Observable.just(Dealership.init())

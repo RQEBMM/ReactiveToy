@@ -11,7 +11,7 @@ import RxSwift
 
 
 protocol APIWrapper{
-    func beginMonitoringCars() -> Observable<Car>;
+    func beginMonitoringCars() -> Observable<[Car]>;
     func fetchDealershipWithId(id:String)->Observable<Dealership>;
     func fetchTrimWithTrimId(id:String)->Observable<Trim>;
     
