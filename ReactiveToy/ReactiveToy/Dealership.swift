@@ -7,16 +7,26 @@
 //
 
 import Foundation
-class Dealership{
-    var name:String
-    var address:String
-    var latitude:Double
-    var longitude:Double
+import Gloss
+
+class Dealership: Decodable {
+    public let name:String?
+    public let address:String?
+    public let latitude:Double?
+    public let longitude:Double?
     
     init(n:String, a:String, lat:Double, lng:Double){
         name = n
         address = a
         latitude = lat
         longitude = lng
+    }
+    required init?(json: JSON) {
+        self.name = "name" <~~ json
+        self.address = "address" <~~ json
+        self.latitude = "latitude" <~~ json
+        self.longitude = "longitude" <~~ json
+        
+        
     }
 }

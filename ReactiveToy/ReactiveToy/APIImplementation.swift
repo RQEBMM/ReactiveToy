@@ -53,8 +53,9 @@ class APIImplementation{
         for dealership in ds{
             let key = ref.child("Dealerships").childByAutoId().key
             let post = [
-                    "name":dealership.name, "address": dealership.address, "latitude":dealership.latitude, "longitude":dealership.longitude]
+                    "name":dealership.name!, "address": dealership.address!, "latitude":dealership.latitude!, "longitude":dealership.longitude!]
             childUpdates["/Dealerships/\(key)"] = post
+            
             dealershipIds.append(key)
         }
         ref.updateChildValues(childUpdates)
@@ -100,9 +101,11 @@ extension APIImplementation : APIWrapper{
         return Observable.create({ (subscriber) -> Disposable in
             self.ref.child("Dealerships").child(id).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
                 let postDict = snapshot.value as! [String : AnyObject]
-                print(postDict)
-                subscriber.onNext(Dealership.init(n: "Toms Ford", a: "123 Main St", lat: 30.264, lng: -97.762))
-                subscriber.onCompleted()
+                if let dealership = Dealership.init(json: postDict){
+                    subscriber.onNext(dealership)
+                    subscriber.onCompleted()
+                }
+                
                 print("finished")
                 // ...
             }) { (error) in
