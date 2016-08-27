@@ -11,5 +11,9 @@ import Foundation
 class ServiceLocator{
     static let sharedInstance = ServiceLocator()
     
-    lazy mWrapper:APIWrapper = 
+    lazy var mWrapper = APIImplementation.init()
+    
+    func getAPIWrapper()->APIWrapper{
+        return mWrapper
+    }
 }
