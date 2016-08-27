@@ -9,5 +9,15 @@
 import Foundation
 
 class Trim{
+    var msrp:Double
+    var engine:String
+    var gasMileage:Double
+    var name:String
     
+    init(m:Double, e:String, mpg:Double, n:String ){
+        msrp = m
+        engine = e
+        gasMileage = mpg
+        name = n 
+    }
 }
