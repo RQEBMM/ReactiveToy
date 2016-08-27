@@ -11,12 +11,15 @@ import Foundation
 class ServiceLocator{
     static let sharedInstance = ServiceLocator()
     
-    lazy var mWrapper = APIImplementation.init()
+    lazy var apiWrapper = APIImplementation.init()
+    lazy var carManager = CarManager.init()
     
-    func getAPIWrapper()->APIWrapper{
-        return mWrapper
+    func getApiWrapper()->APIWrapper {
+        return apiWrapper
     }
-    init(){
-        //mWrapper.guaranteeData()
+    
+    func getCarManager()->CarManager {
+        return carManager
     }
+    
 }

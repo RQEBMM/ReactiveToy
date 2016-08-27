@@ -17,13 +17,14 @@
 		B34D09141D713616004F0611 /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D09131D713616004F0611 /* CarManager.swift */; };
 		B34D09151D713616004F0611 /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D09131D713616004F0611 /* CarManager.swift */; };
 		B39DE1981D692CE000B18F48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DE1971D692CE000B18F48 /* AppDelegate.swift */; };
-		B39DE19A1D692CE000B18F48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DE1991D692CE000B18F48 /* ViewController.swift */; };
 		B39DE19D1D692CE000B18F48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B39DE19B1D692CE000B18F48 /* Main.storyboard */; };
 		B39DE19F1D692CE000B18F48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B39DE19E1D692CE000B18F48 /* Assets.xcassets */; };
 		B39DE1A21D692CE000B18F48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B39DE1A01D692CE000B18F48 /* LaunchScreen.storyboard */; };
 		B39DE1AD1D692CE100B18F48 /* ReactiveToyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DE1AC1D692CE100B18F48 /* ReactiveToyTests.swift */; };
 		B39DE1C61D69300500B18F48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39DE1C51D69300500B18F48 /* GoogleService-Info.plist */; };
 		B39DE1C71D69300500B18F48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39DE1C51D69300500B18F48 /* GoogleService-Info.plist */; };
+		B3C3AA0C1D713AAD00A1FDC0 /* DealerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3AA0B1D713AAD00A1FDC0 /* DealerTableViewController.swift */; };
+		B3C3AA0D1D713AAD00A1FDC0 /* DealerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3AA0B1D713AAD00A1FDC0 /* DealerTableViewController.swift */; };
 		EDE5E752E637F3613C697CE9 /* Pods_ReactiveToyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BD69A640574C47C2F12E87 /* Pods_ReactiveToyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +57,6 @@
 		B34D09131D713616004F0611 /* CarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarManager.swift; sourceTree = "<group>"; };
 		B39DE1941D692CE000B18F48 /* ReactiveToy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveToy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39DE1971D692CE000B18F48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B39DE1991D692CE000B18F48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B39DE19C1D692CE000B18F48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B39DE19E1D692CE000B18F48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B39DE1A11D692CE000B18F48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +67,7 @@
 		B39DE1B71D692CE100B18F48 /* ReactiveToyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveToyUITests.swift; sourceTree = "<group>"; };
 		B39DE1B91D692CE100B18F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B39DE1C51D69300500B18F48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B3C3AA0B1D713AAD00A1FDC0 /* DealerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,12 +155,12 @@
 		B39DE1961D692CE000B18F48 /* ReactiveToy */ = {
 			isa = PBXGroup;
 			children = (
+				B3C3AA0B1D713AAD00A1FDC0 /* DealerTableViewController.swift */,
 				B34D09121D7135E4004F0611 /* Manager */,
 				636A4A471D712A6800CC8A11 /* Services */,
 				636A4A401D7128F800CC8A11 /* Models */,
 				B39DE1C51D69300500B18F48 /* GoogleService-Info.plist */,
 				B39DE1971D692CE000B18F48 /* AppDelegate.swift */,
-				B39DE1991D692CE000B18F48 /* ViewController.swift */,
 				B39DE19B1D692CE000B18F48 /* Main.storyboard */,
 				B39DE19E1D692CE000B18F48 /* Assets.xcassets */,
 				B39DE1A01D692CE000B18F48 /* LaunchScreen.storyboard */,
@@ -430,7 +431,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B39DE19A1D692CE000B18F48 /* ViewController.swift in Sources */,
 				63E4DCB51D7127E20023E9AC /* APIWrapper.swift in Sources */,
 				636A4A4B1D712B2100CC8A11 /* APIImplementation.swift in Sources */,
 				636A4A421D71290300CC8A11 /* Car.swift in Sources */,
@@ -439,6 +439,7 @@
 				636A4A441D71298900CC8A11 /* Dealership.swift in Sources */,
 				B39DE1981D692CE000B18F48 /* AppDelegate.swift in Sources */,
 				636A4A491D712A7D00CC8A11 /* ServiceLocator.swift in Sources */,
+				B3C3AA0C1D713AAD00A1FDC0 /* DealerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +449,7 @@
 			files = (
 				B34D09151D713616004F0611 /* CarManager.swift in Sources */,
 				B39DE1AD1D692CE100B18F48 /* ReactiveToyTests.swift in Sources */,
+				B3C3AA0D1D713AAD00A1FDC0 /* DealerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

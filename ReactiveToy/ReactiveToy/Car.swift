@@ -7,18 +7,22 @@
 //
 
 import Foundation
-class Car{
+class Car {
+    
     var vin:String
     var model:String
     var trimId:String
     var dealershipId:String
+    
     var trim:Trim?
     var dealership:Dealership?
     
-    init(v:String, m:String, tid:String, did:String){
+    init(v:String, m:String, tid:String, did:String) {
+
         vin = v
         model = m
         trimId = tid
         dealershipId = did
     }
+    
 }

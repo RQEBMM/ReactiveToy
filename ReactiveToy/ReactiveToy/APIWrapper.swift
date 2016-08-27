@@ -10,7 +10,8 @@ import Foundation
 import RxSwift
 
 
-protocol APIWrapper{
+protocol APIWrapper {
+    
     func beginMonitoringCars() -> Observable<[Car]>;
     func fetchDealershipWithId(id:String)->Observable<Dealership>;
     func fetchTrimWithTrimId(id:String)->Observable<Trim>;
