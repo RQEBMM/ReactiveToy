@@ -119,6 +119,25 @@ extension APIImplementation : APIWrapper{
         })
     }
     func fetchTrimWithTrimId(id:String)->Observable<Trim>{
-        return Observable.just(Trim.init(m: 3250, e: "4Liter Turbo", mpg: 25.52, n: "Premium"))
+        return Observable.create({ (subscriber) -> Disposable in
+            self.ref.child("Trims").child(id).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                let postDict = snapshot.value as! [String : AnyObject]
+                if let trim = Trim.init(json: postDict){
+                    subscriber.onNext(trim)
+                    subscriber.onCompleted()
+                }
+                
+                print("finished")
+                // ...
+            }) { (error) in
+                print(error.localizedDescription)
+            }
+            
+            return AnonymousDisposable {
+                print("ack we wanted to cancel")
+            }
+            
+        })
+
     }
 }

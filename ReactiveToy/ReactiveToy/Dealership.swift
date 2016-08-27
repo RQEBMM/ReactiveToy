@@ -10,10 +10,10 @@ import Foundation
 import Gloss
 
 class Dealership: Decodable {
-    public let name:String?
-    public let address:String?
-    public let latitude:Double?
-    public let longitude:Double?
+    let name:String?
+    let address:String?
+    let latitude:Double?
+    let longitude:Double?
     
     init(n:String, a:String, lat:Double, lng:Double){
         name = n
