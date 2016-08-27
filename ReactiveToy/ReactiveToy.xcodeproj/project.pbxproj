@@ -14,8 +14,6 @@
 		636A4A491D712A7D00CC8A11 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4A481D712A7D00CC8A11 /* ServiceLocator.swift */; };
 		636A4A4B1D712B2100CC8A11 /* APIImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4A4A1D712B2100CC8A11 /* APIImplementation.swift */; };
 		63E4DCB51D7127E20023E9AC /* APIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E4DCB41D7127E20023E9AC /* APIWrapper.swift */; };
-		B34D09141D713616004F0611 /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D09131D713616004F0611 /* CarManager.swift */; };
-		B34D09151D713616004F0611 /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D09131D713616004F0611 /* CarManager.swift */; };
 		B39DE1981D692CE000B18F48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DE1971D692CE000B18F48 /* AppDelegate.swift */; };
 		B39DE19D1D692CE000B18F48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B39DE19B1D692CE000B18F48 /* Main.storyboard */; };
 		B39DE19F1D692CE000B18F48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B39DE19E1D692CE000B18F48 /* Assets.xcassets */; };
@@ -25,6 +23,10 @@
 		B39DE1C71D69300500B18F48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39DE1C51D69300500B18F48 /* GoogleService-Info.plist */; };
 		B3C3AA0C1D713AAD00A1FDC0 /* DealerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3AA0B1D713AAD00A1FDC0 /* DealerTableViewController.swift */; };
 		B3C3AA0D1D713AAD00A1FDC0 /* DealerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3AA0B1D713AAD00A1FDC0 /* DealerTableViewController.swift */; };
+		B3C3AA141D713DAC00A1FDC0 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3AA131D713DAC00A1FDC0 /* CarViewModel.swift */; };
+		B3C3AA151D713DAC00A1FDC0 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3AA131D713DAC00A1FDC0 /* CarViewModel.swift */; };
+		B3C3AA171D713DC400A1FDC0 /* DealershipTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3AA161D713DC400A1FDC0 /* DealershipTableViewModel.swift */; };
+		B3C3AA181D713DC400A1FDC0 /* DealershipTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3AA161D713DC400A1FDC0 /* DealershipTableViewModel.swift */; };
 		EDE5E752E637F3613C697CE9 /* Pods_ReactiveToyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BD69A640574C47C2F12E87 /* Pods_ReactiveToyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +56,6 @@
 		67BD69A640574C47C2F12E87 /* Pods_ReactiveToyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveToyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		802236865FEE22773224D06C /* Pods-ReactiveToyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveToyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveToyTests/Pods-ReactiveToyTests.release.xcconfig"; sourceTree = "<group>"; };
 		9DE9EEF1F17B6204F259791F /* Pods_ReactiveToy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveToy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B34D09131D713616004F0611 /* CarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarManager.swift; sourceTree = "<group>"; };
 		B39DE1941D692CE000B18F48 /* ReactiveToy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveToy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39DE1971D692CE000B18F48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B39DE19C1D692CE000B18F48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +69,8 @@
 		B39DE1B91D692CE100B18F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B39DE1C51D69300500B18F48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B3C3AA0B1D713AAD00A1FDC0 /* DealerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerTableViewController.swift; sourceTree = "<group>"; };
+		B3C3AA131D713DAC00A1FDC0 /* CarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
+		B3C3AA161D713DC400A1FDC0 /* DealershipTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealershipTableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +129,6 @@
 		B34D09121D7135E4004F0611 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				B34D09131D713616004F0611 /* CarManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -155,7 +157,8 @@
 		B39DE1961D692CE000B18F48 /* ReactiveToy */ = {
 			isa = PBXGroup;
 			children = (
-				B3C3AA0B1D713AAD00A1FDC0 /* DealerTableViewController.swift */,
+				B3C3AA0F1D713D6D00A1FDC0 /* View Models */,
+				B3C3AA0E1D713BA600A1FDC0 /* Controllers */,
 				B34D09121D7135E4004F0611 /* Manager */,
 				636A4A471D712A6800CC8A11 /* Services */,
 				636A4A401D7128F800CC8A11 /* Models */,
@@ -185,6 +188,23 @@
 				B39DE1B91D692CE100B18F48 /* Info.plist */,
 			);
 			path = ReactiveToyUITests;
+			sourceTree = "<group>";
+		};
+		B3C3AA0E1D713BA600A1FDC0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B3C3AA0B1D713AAD00A1FDC0 /* DealerTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B3C3AA0F1D713D6D00A1FDC0 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				B3C3AA131D713DAC00A1FDC0 /* CarViewModel.swift */,
+				B3C3AA161D713DC400A1FDC0 /* DealershipTableViewModel.swift */,
+			);
+			name = "View Models";
 			sourceTree = "<group>";
 		};
 		D30208C3BBA3CB8B36462356 /* Frameworks */ = {
@@ -434,11 +454,12 @@
 				63E4DCB51D7127E20023E9AC /* APIWrapper.swift in Sources */,
 				636A4A4B1D712B2100CC8A11 /* APIImplementation.swift in Sources */,
 				636A4A421D71290300CC8A11 /* Car.swift in Sources */,
-				B34D09141D713616004F0611 /* CarManager.swift in Sources */,
 				636A4A461D71299300CC8A11 /* Trim.swift in Sources */,
 				636A4A441D71298900CC8A11 /* Dealership.swift in Sources */,
 				B39DE1981D692CE000B18F48 /* AppDelegate.swift in Sources */,
+				B3C3AA141D713DAC00A1FDC0 /* CarViewModel.swift in Sources */,
 				636A4A491D712A7D00CC8A11 /* ServiceLocator.swift in Sources */,
+				B3C3AA171D713DC400A1FDC0 /* DealershipTableViewModel.swift in Sources */,
 				B3C3AA0C1D713AAD00A1FDC0 /* DealerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,9 +468,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B34D09151D713616004F0611 /* CarManager.swift in Sources */,
+				B3C3AA181D713DC400A1FDC0 /* DealershipTableViewModel.swift in Sources */,
 				B39DE1AD1D692CE100B18F48 /* ReactiveToyTests.swift in Sources */,
 				B3C3AA0D1D713AAD00A1FDC0 /* DealerTableViewController.swift in Sources */,
+				B3C3AA151D713DAC00A1FDC0 /* CarViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
