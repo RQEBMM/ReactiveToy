@@ -13,7 +13,6 @@ class ServiceLocator {
     static let sharedInstance = ServiceLocator()
     
     lazy var apiWrapper = APIImplementation.init()
-    lazy var carManager = CarManager.init()
     
     init() {
         apiWrapper.guaranteeData()
@@ -22,11 +21,5 @@ class ServiceLocator {
     func getApiWrapper()->APIWrapper {
         return apiWrapper
     }
-    
-    func getCarManager()->CarManager {
-        
-        return carManager
-    
-    }
-    
+
 }

@@ -10,8 +10,7 @@ import UIKit
 
 class DealerTableViewController: UITableViewController {
 
-    lazy var carManager = ServiceLocator.sharedInstance.getCarManager()
-    var dealerships:[DealershipTableViewModel]
+    var dealerships:[DealershipTableViewModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +34,10 @@ class DealerTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return dealerships.count
+        
+        guard let sections = dealerships else {return 0}
+
+        return sections.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

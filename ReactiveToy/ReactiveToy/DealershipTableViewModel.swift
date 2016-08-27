@@ -10,7 +10,12 @@ import Foundation
 
 class DealershipTableViewModel {
     
-    var name:String
+    var dealerName:String
     var cars:[CarViewModel]
+    
+    init(name: String, carList: [CarViewModel]) {
+        dealerName = name
+        cars = carList
+    }
 
 }
