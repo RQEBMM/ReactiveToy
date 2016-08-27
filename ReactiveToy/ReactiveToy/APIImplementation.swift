@@ -34,7 +34,7 @@ class APIImplementation{
         for trim in trims{
             let key = ref.child("Trims").childByAutoId().key
             let post = [
-                "msrp":trim.msrp, "engine": trim.engine, "mpg":trim.gasMileage, "name":trim.name]
+                "msrp":trim.msrp!, "engine": trim.engine!, "mpg":trim.gasMileage!, "name":trim.name!]
             childUpdates["/Trims/\(key)"] = post
             trimids.append(key)
         }
@@ -53,8 +53,9 @@ class APIImplementation{
         for dealership in ds{
             let key = ref.child("Dealerships").childByAutoId().key
             let post = [
-                    "name":dealership.name, "address": dealership.address, "latitude":dealership.latitude, "longitude":dealership.longitude]
+                    "name":dealership.name!, "address": dealership.address!, "latitude":dealership.latitude!, "longitude":dealership.longitude!]
             childUpdates["/Dealerships/\(key)"] = post
+            
             dealershipIds.append(key)
         }
         ref.updateChildValues(childUpdates)
@@ -97,10 +98,13 @@ extension APIImplementation : APIWrapper{
     func fetchDealershipWithId(id:String)->Observable<Dealership>{
         
         return Observable.create({ (subscriber) -> Disposable in
-            self.ref.child("Dealership").child(id).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-                print(snapshot)
-                subscriber.onNext(Dealership.init(n: "Toms Ford", a: "123 Main St", lat: 30.264, lng: -97.762))
-                subscriber.onCompleted()
+            self.ref.child("Dealerships").child(id).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                let postDict = snapshot.value as! [String : AnyObject]
+                if let dealership = Dealership.init(json: postDict){
+                    subscriber.onNext(dealership)
+                    subscriber.onCompleted()
+                }
+                
                 print("finished")
                 // ...
             }) { (error) in
@@ -114,6 +118,25 @@ extension APIImplementation : APIWrapper{
         })
     }
     func fetchTrimWithTrimId(id:String)->Observable<Trim>{
-        return Observable.just(Trim.init(m: 3250, e: "4Liter Turbo", mpg: 25.52, n: "Premium"))
+        return Observable.create({ (subscriber) -> Disposable in
+            self.ref.child("Trims").child(id).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                let postDict = snapshot.value as! [String : AnyObject]
+                if let trim = Trim.init(json: postDict){
+                    subscriber.onNext(trim)
+                    subscriber.onCompleted()
+                }
+                
+                print("finished")
+                // ...
+            }) { (error) in
+                print(error.localizedDescription)
+            }
+            
+            return AnonymousDisposable {
+                print("ack we wanted to cancel")
+            }
+            
+        })
+
     }
 }
