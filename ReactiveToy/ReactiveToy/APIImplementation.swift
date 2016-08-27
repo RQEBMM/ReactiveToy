@@ -73,7 +73,7 @@ class APIImplementation{
                 let trim_id = trims[Int(arc4random_uniform(3))]
                 let dealership_id = dealerships[Int(arc4random_uniform(3))]
                 let model = models[Int(arc4random_uniform(4))]
-                cars.append(Car.init(aVin: "12312312312", aModel: model, aTrimId: trim_id, aDealershipId: dealership_id))
+                cars.append(Car.init(v: "12312312312", m: model, tid: trim_id, did: dealership_id))
                 
             }
 
@@ -82,7 +82,7 @@ class APIImplementation{
         for car in cars{
             let key = ref.child("Cars").childByAutoId().key
             let post = [
-                "vin":car.vin, "model": car.model, "trim_id":car.trimId, "dealership_id":car.dealershipId]
+                "vin":car.vin!, "model": car.model!, "trim_id":car.trimId!, "dealership_id":car.dealershipId!]
             childUpdates["/Cars/\(key)"] = post
             
         }
@@ -92,13 +92,31 @@ class APIImplementation{
 }
 extension APIImplementation : APIWrapper{
     func beginMonitoringCars() -> Observable<[Car]>{
-        return Observable.just([Car.init(aVin: "231342423423423", aModel: "Corolla", aTrimId: "123", aDealershipId: "555")])
+
+        return Observable.create({ (subscriber) -> Disposable in
+            self.ref.child("Cars").observeEventType(FIRDataEventType.Value, withBlock: { (snapshots) in
+                var cars:[Car] = []
+                print(snapshots)
+                for(_, snapshot) in snapshots.children.enumerate(){
+                    if let firsnap = snapshot as? FIRDataSnapshot,
+                    let postDict = firsnap.value as? [String:AnyObject],
+                    let car = Car.init(json: postDict){
+                        cars.append(car)
+                    }
+
+                }
+                subscriber.on(.Next(cars))
+            })
+            return AnonymousDisposable {
+                print("ack we wanted to cancel")
+            }
+        })
     }
     
     func fetchDealershipWithId(id:String)->Observable<Dealership>{
         
         return Observable.create({ (subscriber) -> Disposable in
-            self.ref.child("Dealerships").child(id).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            self.ref.child("Dealerships").child(id).observeSingleEventOfType(.Value, withBlock: { (snapshot:FIRDataSnapshot) in
                 let postDict = snapshot.value as! [String : AnyObject]
                 if let dealership = Dealership.init(json: postDict){
                     subscriber.onNext(dealership)

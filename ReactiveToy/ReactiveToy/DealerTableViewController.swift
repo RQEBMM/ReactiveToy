@@ -22,41 +22,38 @@ class DealerTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        let carStream = ServiceLocator.sharedInstance.getApiWrapper().beginMonitoringCars()
+        ServiceLocator.sharedInstance.getApiWrapper().beginMonitoringCars()
             .flatMap { cars -> Observable<Car> in
                 cars.toObservable()
-        }
-        
-        carStream.map { (car) -> String in
-                car.dealershipId
+            }.map { (car) -> String in
+                car.dealershipId!
             }.distinctUntilChanged().flatMap { (dealerId) -> Observable<Dealership> in
                 ServiceLocator.sharedInstance.getApiWrapper().fetchDealershipWithId(dealerId)
             }.map { (dealership) -> DealershipTableViewModel in
                 DealershipTableViewModel(name: dealership.name!)
-            }.toArray().subscribeNext { dealershipVmStream in
-                self.dealerships = dealershipVmStream
-                
+            }.map { (dealershipVm) in
+                self.dealerships?.append(dealershipVm)
+                print(self.dealerships)
         }
         
-        var array = []
-        
-        [].enumerate()
+                
+        print(self.dealerships)
         
         title = "Cars by Dealership"
         
-//        dealerships = [
-//            DealershipTableViewModel(name: "A Dealer", carList:[
-//                CarViewModel(aName:"Car 1", aTrim:"Trim 1"),
-//                CarViewModel(aName:"Car 2", aTrim:"Trim 2"),
-//                CarViewModel(aName:"Car 3", aTrim:"Trim 3")
-//                ]),
-//            DealershipTableViewModel(name: "Another Dealer", carList:[
-//                CarViewModel(aName:"Car A", aTrim:"Trim A"),
-//                CarViewModel(aName:"Car B", aTrim:"Trim B"),
-//                CarViewModel(aName:"Car C", aTrim:"Trim C")
-//                ])
-//        ]
-
+        //        dealerships = [
+        //            DealershipTableViewModel(name: "A Dealer", carList:[
+        //                CarViewModel(aName:"Car 1", aTrim:"Trim 1"),
+        //                CarViewModel(aName:"Car 2", aTrim:"Trim 2"),
+        //                CarViewModel(aName:"Car 3", aTrim:"Trim 3")
+        //                ]),
+        //            DealershipTableViewModel(name: "Another Dealer", carList:[
+        //                CarViewModel(aName:"Car A", aTrim:"Trim A"),
+        //                CarViewModel(aName:"Car B", aTrim:"Trim B"),
+        //                CarViewModel(aName:"Car C", aTrim:"Trim C")
+        //                ])
+        //        ]
+        
     }
     
     override func didReceiveMemoryWarning() {

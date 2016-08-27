@@ -7,21 +7,31 @@
 //
 
 import Foundation
+import Gloss
+
+
 class Car {
     
-    var vin:String
-    var model:String
-    var trimId:String
-    var dealershipId:String
+    var vin:String?
+    var model:String?
+    var trimId:String?
+    var dealershipId:String?
     
     var trim:Trim?
     var dealership:Dealership?
     
-    init(aVin:String, aModel:String, aTrimId:String, aDealershipId:String) {
-        vin = aVin
-        model = aModel
-        trimId = aTrimId
-        dealershipId = aDealershipId
+    init(v:String, m:String, tid:String, did:String) {
+        vin = v
+        model = m
+        trimId = tid
+        dealershipId = did
+    }
+    
+    required init?(json: JSON) {
+        self.vin = "vin" <~~ json
+        self.model = "model" <~~ json
+        self.trimId = "trim_id" <~~ json
+        self.dealershipId = "dealership_id" <~~ json
     }
     
 }
