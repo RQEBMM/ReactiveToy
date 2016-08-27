@@ -8,11 +8,35 @@
 
 import Foundation
 import RxSwift
+import Firebase
+
 
 class APIImplementation{
+    lazy var ref = FIRDatabase.database().reference()
+    
     func guaranteeData() {
+        let key = ref.child("users").childByAutoId().key
+        let post = ["name": "Ben"]
         
+        let childUpdates = ["/users/\(key)": post]
+        ref.updateChildValues(childUpdates)
+        
+        let _ = ref.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+            let postDict = snapshot.value as! [String : AnyObject]
+            // ...
+            print(postDict)
+        })
+
     }
+    
+    func generateDealerships(){
+        let key = ref.child("Dealerships").childByAutoId().key
+        for i in 0...10{
+            
+        }
+        let post = ["name": "Ben"]
+    }
+    
 }
 extension APIImplementation : APIWrapper{
     func beginMonitoringCars() -> Observable<[Car]>{
