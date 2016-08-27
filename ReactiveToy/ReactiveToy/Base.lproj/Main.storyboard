@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="182" y="179"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Dealer Table View Controller-->
         <scene sceneID="2Fo-lc-Iuk">
             <objects>
-                <tableViewController id="pk3-iR-dii" sceneMemberID="viewController">
+                <tableViewController id="pk3-iR-dii" customClass="DealerTableViewController" customModule="ReactiveToy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qEj-aT-GM7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

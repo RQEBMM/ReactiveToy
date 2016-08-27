@@ -1,5 +1,5 @@
 //
-//  CarManager.swift
+//  CarViewModel.swift
 //  ReactiveToy
 //
 //  Created by Benjamin McCloskey on 8/26/16.
@@ -8,16 +8,9 @@
 
 import Foundation
 
-class CarManager {
+class CarViewModel {
     
-    var cars:[Car] = []
-    
-    init() {
-        
-    }
-    
-    func observeCars() {
-        
-    }
+    var name:String = ""
+    var trim:String = ""
     
 }

@@ -10,6 +10,9 @@ import UIKit
 
 class DealerTableViewController: UITableViewController {
 
+    lazy var carManager = ServiceLocator.sharedInstance.getCarManager()
+    var dealerships:[DealershipTableViewModel]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +21,9 @@ class DealerTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +35,7 @@ class DealerTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return dealerships.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
