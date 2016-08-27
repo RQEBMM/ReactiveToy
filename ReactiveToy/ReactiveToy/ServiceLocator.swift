@@ -14,10 +14,6 @@ class ServiceLocator{
     lazy var apiWrapper = APIImplementation.init()
     lazy var carManager = CarManager.init()
     
-    init(){
-        apiWrapper.guaranteeData()
-    }
-    
     func getApiWrapper()->APIWrapper {
         return apiWrapper
     }
