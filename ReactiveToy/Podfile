@@ -14,13 +14,4 @@ target 'ReactiveToy' do
     
 end
 
-target 'ReactiveToyTests' do
-    
-    pod 'RxTests',    '~> 2.0'
-    
-end
-
-target 'ReactiveToyUITests' do
-
-end
 
