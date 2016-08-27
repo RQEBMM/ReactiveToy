@@ -16,4 +16,7 @@ class ServiceLocator{
     func getAPIWrapper()->APIWrapper{
         return mWrapper
     }
+    init(){
+        mWrapper.guaranteeData()
+    }
 }
