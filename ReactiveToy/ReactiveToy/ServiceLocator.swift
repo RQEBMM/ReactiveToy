@@ -17,6 +17,6 @@ class ServiceLocator{
         return mWrapper
     }
     init(){
-        mWrapper.guaranteeData()
+        //mWrapper.guaranteeData()
     }
 }
