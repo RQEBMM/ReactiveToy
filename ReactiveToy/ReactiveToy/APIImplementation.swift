@@ -34,7 +34,7 @@ class APIImplementation{
         for trim in trims{
             let key = ref.child("Trims").childByAutoId().key
             let post = [
-                "msrp":trim.msrp, "engine": trim.engine, "mpg":trim.gasMileage, "name":trim.name]
+                "msrp":trim.msrp!, "engine": trim.engine!, "mpg":trim.gasMileage!, "name":trim.name!]
             childUpdates["/Trims/\(key)"] = post
             trimids.append(key)
         }
