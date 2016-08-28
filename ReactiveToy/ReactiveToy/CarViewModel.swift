@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class CarViewModel {
+    
+    var name:String
+    var trim:String
+    
+    init(name: String, trim:String) {
+        self.name = name
+        self.trim = trim
+    }
+}

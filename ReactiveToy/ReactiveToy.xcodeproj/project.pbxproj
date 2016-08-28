@@ -14,6 +14,7 @@
 		636A4A491D712A7D00CC8A11 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4A481D712A7D00CC8A11 /* ServiceLocator.swift */; };
 		636A4A4B1D712B2100CC8A11 /* APIImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4A4A1D712B2100CC8A11 /* APIImplementation.swift */; };
 		63E4DCB51D7127E20023E9AC /* APIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E4DCB41D7127E20023E9AC /* APIWrapper.swift */; };
+		B375211A1D72503C000BD9F2 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37521191D72503C000BD9F2 /* File.swift */; };
 		B39DE1981D692CE000B18F48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DE1971D692CE000B18F48 /* AppDelegate.swift */; };
 		B39DE19D1D692CE000B18F48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B39DE19B1D692CE000B18F48 /* Main.storyboard */; };
 		B39DE19F1D692CE000B18F48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B39DE19E1D692CE000B18F48 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		63E4DCB41D7127E20023E9AC /* APIWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIWrapper.swift; sourceTree = "<group>"; };
 		67BD69A640574C47C2F12E87 /* Pods_ReactiveToyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveToyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE9EEF1F17B6204F259791F /* Pods_ReactiveToy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveToy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B37521191D72503C000BD9F2 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		B39DE1941D692CE000B18F48 /* ReactiveToy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveToy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39DE1971D692CE000B18F48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B39DE19C1D692CE000B18F48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		B34D09121D7135E4004F0611 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				B37521191D72503C000BD9F2 /* File.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63E4DCB51D7127E20023E9AC /* APIWrapper.swift in Sources */,
+				B375211A1D72503C000BD9F2 /* File.swift in Sources */,
 				636A4A4B1D712B2100CC8A11 /* APIImplementation.swift in Sources */,
 				636A4A421D71290300CC8A11 /* Car.swift in Sources */,
 				636A4A461D71299300CC8A11 /* Trim.swift in Sources */,

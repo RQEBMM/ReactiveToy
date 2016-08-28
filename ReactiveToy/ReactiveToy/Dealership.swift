@@ -9,24 +9,26 @@
 import Foundation
 import Gloss
 
-class Dealership: Decodable {
+class Dealership {
     let name:String?
     let address:String?
     let latitude:Double?
     let longitude:Double?
+    let id:String
     
-    init(n:String, a:String, lat:Double, lng:Double){
+    init(n:String, a:String, lat:Double, lng:Double, id:String){
         name = n
         address = a
         latitude = lat
         longitude = lng
+        self.id = id
     }
-    required init?(json: JSON) {
+    required init?(json: JSON, server_id:String) {
         self.name = "name" <~~ json
         self.address = "address" <~~ json
         self.latitude = "latitude" <~~ json
         self.longitude = "longitude" <~~ json
-        
+        self.id = server_id
         
     }
 }

@@ -45,9 +45,9 @@ class APIImplementation{
     
     func generateDealerships()->[String]{
         var ds = [Dealership]()
-        ds.append(Dealership.init(n: "Toms Ford", a: "123 Main St", lat: 30.264, lng: -97.762))
-        ds.append(Dealership.init(n: "Alans Toyota", a: "123 Long St", lat: 30.262, lng: -97.765))
-        ds.append(Dealership.init(n: "Johhns Chevy", a: "123 Maple St", lat: 30.282, lng: -97.769))
+        ds.append(Dealership.init(n: "Toms Ford", a: "123 Main St", lat: 30.264, lng: -97.762, id:"121312312"))
+        ds.append(Dealership.init(n: "Alans Toyota", a: "123 Long St", lat: 30.262, lng: -97.765, id:"214235252"))
+        ds.append(Dealership.init(n: "Johhns Chevy", a: "123 Maple St", lat: 30.282, lng: -97.769, id:"1234213131"))
         var childUpdates:[String: AnyObject] = [String: AnyObject]()
         var dealershipIds = [String]()
         for dealership in ds{
@@ -66,24 +66,25 @@ class APIImplementation{
         var cars = [Car]()
         
         let models = ["Corolla", "A4", "Accord", "Focus"]
+
+        var childUpdates:[String: AnyObject] = [String: AnyObject]()
         for _ in 0...30{
             if let trims = dummyTrims,
-                let dealerships = dummyDealerships
-            {
+                let dealerships = dummyDealerships{
+                let key = ref.child("Cars").childByAutoId().key
                 let trim_id = trims[Int(arc4random_uniform(3))]
                 let dealership_id = dealerships[Int(arc4random_uniform(3))]
                 let model = models[Int(arc4random_uniform(4))]
-                cars.append(Car.init(v: "12312312312", m: model, tid: trim_id, did: dealership_id))
+                
+                let car = Car.init(v: "12312312312", m:model, tid: trim_id, did: dealership_id, server_id: key)
+                cars.append(car)
+                
+                let post = [
+                    "vin":car.vin!, "model": car.model!, "trim_id":car.trimId!, "dealership_id":car.dealershipId!]
+                
+                childUpdates["/Cars/\(key)"] = post
                 
             }
-
-        }
-        var childUpdates:[String: AnyObject] = [String: AnyObject]()
-        for car in cars{
-            let key = ref.child("Cars").childByAutoId().key
-            let post = [
-                "vin":car.vin!, "model": car.model!, "trim_id":car.trimId!, "dealership_id":car.dealershipId!]
-            childUpdates["/Cars/\(key)"] = post
             
         }
         ref.updateChildValues(childUpdates)
@@ -100,7 +101,7 @@ extension APIImplementation : APIWrapper{
                 for(_, snapshot) in snapshots.children.enumerate(){
                     if let firsnap = snapshot as? FIRDataSnapshot,
                     let postDict = firsnap.value as? [String:AnyObject],
-                    let car = Car.init(json: postDict){
+                    let car = Car.init(json: postDict, server_id: firsnap.key){
                         cars.append(car)
                     }
 
@@ -118,7 +119,7 @@ extension APIImplementation : APIWrapper{
         return Observable.create({ (subscriber) -> Disposable in
             self.ref.child("Dealerships").child(id).observeSingleEventOfType(.Value, withBlock: { (snapshot:FIRDataSnapshot) in
                 let postDict = snapshot.value as! [String : AnyObject]
-                if let dealership = Dealership.init(json: postDict){
+                if let dealership = Dealership.init(json: postDict, server_id: snapshot.key){
                     subscriber.onNext(dealership)
                     subscriber.onCompleted()
                 }
